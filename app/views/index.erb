@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+    <% Recipe.all.each do |rec| %>
+    <p> <%= "#{rec.id}. <a href='/recipes/#{rec.id}'>#{rec.name}</a> - #{rec.cook_time} - #{rec.ingredients}" %> 
+    <% end %></p>
+    </body>
+
+</html>

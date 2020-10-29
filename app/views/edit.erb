@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p> <%= "#{@recipe.id}. #{@recipe.name} - #{@recipe.cook_time} minutes - #{@recipe.ingredients}" %> 
+
+        <form action="/recipes/<%= @recipe.id %>" method="post">
+            <input id="hidden" type="hidden" name="_method" value="PATCH">
+            <p><label for="name">Name: </label><input type="text" id="name" name="name"></p>
+            <p><label for ="cook_time">Cook Time: </label><input type="text" id="cook_time" name="cook_time"></p>
+            <p><label for="ingredients">Ingredients: </label><input type="text" id="ingredients" name="ingredients"></p>
+            <p><input type="submit" value="submit"></p>
+        </form>
+    </body>
+</html>
